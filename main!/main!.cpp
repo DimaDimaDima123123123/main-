@@ -1,21 +1,27 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include "Laptop.h"
+﻿#include "Laptop.h"
 #include "Cpu.h"
-#include "RAM.h"
-#include "SSD.h"
-#include "GPU.h"
+#include "Ram.h"
+#include "Ssd.h"
+#include "Gpu.h"
 #include <iostream>
+using namespace std;
 
-int main() {
-    Cpu cpu("Intel i7", 300);
-    RAM ram("Corsair 16GB", 100);
-    SSD ssd("Samsung 1TB", 150);
-    GPU gpu("NVIDIA GTX 3080", 700);
+int main() 
+{
+    Cpu cpu("Intel i511500", 200);
 
-    Laptop laptop("Dell XPS", 200, cpu, ram, ssd, gpu);
+    Ram ram("Kingston 32GB", 180);
+
+    Ssd ssd("Kingston 512GB", 100);
+
+    Gpu gpu("Nvidia RTX 4060", 808);
+
+    Laptop laptop("Msi", 200, cpu, ram, ssd, gpu);
+
 
     laptop.displayComponents();
-    std::cout << "Total Price: $" << laptop.calculateTotalPrice() << std::endl;
+
+    cout << "Total price of the laptop : " << laptop.calculateTotalPrice() << " $!\n";
 
     return 0;
 }

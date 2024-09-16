@@ -1,12 +1,12 @@
 #ifndef GPU_H
 #define GPU_H
-#define _CRT_SECURE_NO_WARNINGS
-class GPU {
+class Gpu
+{
 private:
-    char name[50]; // fixed-size character array for name
+    char name[50];
     double price;
 public:
-    GPU(const char* name, double price);
+    Gpu(const char* name, double price);
     const char* getName() const;
     double getPrice() const;
 };

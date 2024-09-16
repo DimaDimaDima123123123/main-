@@ -1,14 +1,17 @@
 #include "SSD.h"
 #include <cstring>
-#define _CRT_SECURE_NO_WARNINGS
-SSD::SSD(const char* name, double price) : price(price) {
+using namespace std;
+
+Ssd::Ssd(const char* name, double price) : price(price) 
+{
     strncpy_s(this->name, sizeof(this->name), name, _TRUNCATE);
 }
+const char* Ssd::getName() const 
 
-const char* SSD::getName() const {
+{
     return name;
 }
-
-double SSD::getPrice() const {
+double Ssd::getPrice() const 
+{
     return price;
 }
